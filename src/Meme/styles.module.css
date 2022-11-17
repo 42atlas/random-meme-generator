@@ -3,7 +3,35 @@
 }
 .skip {
   background-color: #3db67d;
+  transition: all 0.25s ease;
+  box-shadow: 2px 2px 1px #666;
 }
 .generate {
   background-color: #8f3037;
+  transition: all 0.25s ease;
+  box-shadow: 2px 2px 1px #666;
+}
+
+.skip:hover,
+.generate:hover {
+  animation: wiggle 1s ease;
+  animation-iteration-count: 1;
+}
+
+@keyframes wiggle {
+  20% {
+    transform: translateX(6px);
+  }
+  40% {
+    transform: translateX(-6px);
+  }
+  60% {
+    transform: translateX(3px);
+  }
+  80% {
+    transform: translateX(-1px);
+  }
+  100% {
+    transform: translateX(0);
+  }
 }

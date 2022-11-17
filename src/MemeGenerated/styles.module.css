@@ -1,12 +1,40 @@
 .copy {
   background-color: #3db67d;
   margin-top: 25px;
+  transition: all 0.25s ease;
+  box-shadow: 2px 2px 1px #666;
 }
 
 .home {
   background-color: #8f3037;
+  transition: all 0.25s ease;
+  box-shadow: 2px 2px 1px #666;
 }
 
 .container {
   margin-top: 50px;
+}
+
+.copy:hover,
+.home:hover {
+  animation: wiggle 1s ease;
+  animation-iteration-count: 1;
+}
+
+@keyframes wiggle {
+  20% {
+    transform: translateX(6px);
+  }
+  40% {
+    transform: translateX(-6px);
+  }
+  60% {
+    transform: translateX(3px);
+  }
+  80% {
+    transform: translateX(-1px);
+  }
+  100% {
+    transform: translateX(0);
+  }
 }
